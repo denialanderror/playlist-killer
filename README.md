@@ -21,4 +21,12 @@ I have been using Spotify for well over a decade, including many years before th
 
 ### Using Playlist Killer:
 
-The program will use the user token to fetch all playlists and write them to a file. It will then open the file using the user's default editor (i.e. `$EDITOR`). The user will see a CSV containing the playlist's title and uuid. Delete the rows you **wish to keep** and when ready, save the file and quit the editor. The program will then print the total number of playlists to delete and will ask for confirmation. **This is your last opportunity to abort**. The playlists will then be deleted.
+* The program will use the user token to fetch all playlists and write them to a file. 
+* It will then open the file using the user's default editor (i.e. `$EDITOR`). 
+* The user will see a CSV containing the playlist's title and uuid. Delete the rows you **wish to keep** and when ready, save the file and quit the editor. 
+* The program will then print the total number of playlists to delete and will ask for confirmation. **This is your last opportunity to abort**. 
+* The playlists will then be deleted.
+
+## Next Steps
+
+If I was really motivated, I would include the auth part in the program itself, rather than having to manually generate your own token. I'm not though. It will be a starting point if I want to do more with the Spotify API in the future though.
