@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"sync"
 )
 
 func main() {
@@ -24,15 +23,9 @@ func main() {
 	fmt.Scanln(&yesno)
 
 	if yesno == "y" {
-		var wg sync.WaitGroup
 		for _, id := range ids {
-			wg.Add(1)
-			go func(id string) {
-				user.UnfollowPlaylist(id)
-				wg.Done()
-			}(id)
+			user.UnfollowPlaylist(id)
 		}
-		wg.Wait()
 		log.Println("Playlists killed!")
 	}
 }
